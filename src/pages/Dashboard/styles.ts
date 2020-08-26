@@ -24,28 +24,35 @@ export const CardContainer = styled.section`
 `;
 
 export const Card = styled.div`
-  background: ${({ total }: CardProps): string => (total ? '#FF872C' : '#fff')};
-  padding: 22px 32px;
-  border-radius: 5px;
-  color: ${({ total }: CardProps): string => (total ? '#fff' : '#363F5F')};
+         background: ${({ total }: CardProps): string =>
+           total ? '#FF872C' : '#fff'};
+         padding: 22px 32px;
+         border-radius: 5px;
+         color: ${({ total }: CardProps): string =>
+           total ? '#fff' : '#363F5F'};
 
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+         header {
+           display: flex;
+           align-items: center;
+           justify-content: space-between;
+           transition: color 0.2s;
 
-    p {
-      font-size: 16px;
-    }
-  }
+           p {
+             font-size: 16px;
+           }
 
-  h1 {
-    margin-top: 14px;
-    font-size: 36px;
-    font-weight: normal;
-    line-height: 54px;
-  }
-`;
+           &:hover {
+             color: crimson;
+           }
+         }
+
+         h1 {
+           margin-top: 14px;
+           font-size: 36px;
+           font-weight: normal;
+           line-height: 54px;
+         }
+       `;
 
 export const TableContainer = styled.section`
   margin-top: 64px;
